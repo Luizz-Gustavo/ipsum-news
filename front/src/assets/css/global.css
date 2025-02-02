@@ -1,0 +1,122 @@
+@import url('https://fonts.cdnfonts.com/css/geomanist');
+
+:root {
+    --white: #FFFFFF;
+    --cream: #f8f8de;
+    --black: #000000;
+    --light-gray: #E4E4E4;
+    --blue: #3F6097;
+    --navy-blue: #18315B;
+    --blue-link: #60A5FA;
+    --dark-blue: #091B39;
+    --yellow: #FFFF00;
+    --brass: #E3A008;
+    --gray-1: #C7C7C7;
+    --gray-2: #949494;
+    --gray-3: #212121;
+    --gray-4: #161716;
+    --red: #e02424;
+    --default-font: 'Geomanist';
+    --default-font-size: 16px;
+    --default-font-weight: 400;
+}
+
+html,
+body,
+#root {
+    background-color: var(--cream);
+    font-family: var(--default-font) !important;
+    font-size: var(--default-font-size) !important;
+    scroll-behavior: smooth;
+    color: var(--black);
+}
+
+input[type="email"] {
+    text-transform: lowercase;
+}
+
+input,
+label {
+    cursor: pointer !important;
+}
+
+.button-yellow {
+    background-color: var(--yellow) !important;
+    color: var(--black) !important;
+}
+
+.button-yellow:hover {
+    background-color: var(--brass) !important;
+    transition: background-color 0.3s ease;
+    color: var(--black) !important;
+}
+
+.ant-spin-dot-item{
+    background-color: var(--black) !important;
+}
+
+/* CSS PARA MODAL */
+.header-modal{
+    padding: 25px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: var(--default-font);
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.bg-gray-900 {
+    background-color: rgb(17 24 39 / 24%) !important;
+}
+
+.btn-fecharModal{
+    top: -13px!important;
+    right: -13px!important;
+    position: absolute!important;
+    background-color: var(--white) !important;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5) !important;
+}
+
+.container-titulo {
+    top: 30px;
+    z-index: 1;
+    padding: 0 25px;
+    position: relative;
+}
+
+.container-titulo>div {
+    border: 1.2px solid var(--black);
+    background-color: var(--yellow);
+    color: var(--black);
+    padding: 20px;
+    font-size: 22px;
+    font-weight: 400;
+    border-radius: 12px;
+}
+
+.container-tabela {
+    background-color: var(--white);
+    border: 1.2px solid var(--black);
+    border-radius: 12px;
+    padding: 55px 0 15px 0;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    padding: 0 15px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+@media (max-width: 768px) {
+    .container-titulo>div {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        color: var(--black);
+        font-size: 22px;
+        font-weight: 400;
+        border-radius: 12px;
+        background-color: var(--yellow);
+    }
+}

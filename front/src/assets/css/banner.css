@@ -1,0 +1,164 @@
+.banner-intro-video{
+  width: 100%;
+  height: 500px;
+}
+
+.lgpd-section{
+  background-color: var(--yellow);
+}
+
+.button-lgpd{
+  background-color: var(--white);
+}
+
+.swiper-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+}
+
+.swiper-container{
+  border-radius: 10px;
+  width: 70%;
+}
+
+.swiper-item-box{
+  border: 4px solid var(--black);
+  border-radius: 10px;
+}
+
+.swiper-pagination-horizontal{
+  display: none;
+}
+
+.highlights{
+  text-decoration: none;
+}
+
+.highlight-icon{
+  color: var(--gray-1);
+  font-size: 38px;
+}
+
+.highlight-text{
+  font-size: 35px;
+}
+
+#button_lgpd {
+  text-decoration: none;
+  padding: 10px 10px;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 35px;
+  background: var(--white);
+  color: var(--black);
+  text-align: center;
+  font-family: "Geomanist", sans-serif;
+  margin-top: 25px;
+}
+
+#button_lgpd:hover {
+  background-color: var(--gray-1);
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 500px) {
+
+  .lgpd-section{
+    padding: 30px;
+  }
+
+  .swiper-box{
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-container{
+    width: 90%;
+    height: 100%;
+  }
+
+  .swiper-pagination{
+    margin-top: 10px !important;
+  }
+
+  .text-lgpd{
+    margin-top: 20px;
+  }
+
+  .button-lgpd{
+    margin-bottom: 20px;
+  }
+
+  .banner-intro-video{
+    width: 100%;
+    height: 250px;
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 767px) {
+  .banner-intro-video{
+    height: 400px !important;
+  }
+
+  .lgpd-section{
+    padding: 30px;
+  }
+
+  .swiper-box{
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-container{
+    width: 90%;
+    height: 100%;
+  }
+
+  .swiper-pagination{
+    margin-top: 10px !important;
+  }
+
+  .button-lgpd{
+    margin-bottom: 20px;
+  }
+
+  .banner-intro-video{
+    width: 100%;
+    height: 250px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .banner-intro-video{
+    width: 100%;
+    height: 580px;
+  }
+  
+  .swiper-box{
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-container{
+    width: 90%;
+    height: 100%;
+  }
+
+  .swiper-pagination{
+    margin-top: 10px !important;
+  } 
+
+  .text-lgpd{
+    margin-top: 20px;
+  }
+
+  .button-lgpd{
+    margin-bottom: 20px;
+  }
+}

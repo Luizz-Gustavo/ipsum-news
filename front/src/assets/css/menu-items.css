@@ -1,0 +1,55 @@
+.main-ul {
+  display: flex;
+  justify-content: center;
+  max-width: 1920px;
+  width: 100%;
+  z-index: 100;
+  margin: auto;
+  font-size: 20px;
+  top: 0; /* Define o ponto onde o elemento se torna "sticky" */
+  padding: 15px;
+}
+
+.main-ul-links {
+  list-style: none;
+  letter-spacing: 2px;
+}
+
+.main-ul-links > a {
+  text-decoration: none;
+  margin: 10px;
+  color: black;
+}
+
+.main-ul-itens:hover {
+  color: #19cdd3;
+  transition: 0.3s;
+  opacity: 0.8;
+}
+
+.barraNav {
+  color: black;
+  padding-right: 10px;
+  list-style: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .main-ul {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) {
+}
+
+@media only screen and (min-width: 992px) {
+}
+@media only screen and (min-width: 1200px) {
+}
+
+@media print {
+  /* Estilizações CSS */
+}
+
+@media handheld and (min-width: 700px) and (orientantion: landscape) {
+  /* Estilizações CSS */
+}

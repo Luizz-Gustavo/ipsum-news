@@ -1,0 +1,9 @@
+.info-section {
+    margin-top: 35px !important;
+}
+
+@media (max-width: 768px) {
+    .post-image {
+        display: none;
+    }
+}

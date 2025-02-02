@@ -1,0 +1,7 @@
+.login-button {
+    background-color: var(--yellow) !important;
+}
+
+.login-button:hover {
+    background-color: var(--brass) !important;
+}

@@ -1,0 +1,7 @@
+.register-button{
+    background-color: var(--yellow) !important;
+}
+
+.register-button:hover{
+    background-color: var(--brass) !important;
+}

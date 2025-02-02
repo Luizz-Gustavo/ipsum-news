@@ -1,0 +1,15 @@
+.main-logo{
+    cursor: pointer;
+}
+
+.bg-nav{
+    background-color: var(--black);
+}
+
+.sign-in-button{
+    background-color: var(--yellow) !important;
+}
+
+.sign-in-button:hover{
+    background-color: var(--brass) !important;
+}

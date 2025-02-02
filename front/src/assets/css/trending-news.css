@@ -1,0 +1,81 @@
+.trending-box {
+  border-left: 1px solid var(--gray-1);
+  position: sticky;
+  top: 150px;
+  overflow-y: auto;
+  width: 100%;
+  height: 100vh;
+}
+
+.trending-title-box {
+  padding: 1rem;
+}
+
+.trending-title {
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+.post-item-trending-box {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.post-item-trending {
+  display: flex;
+  justify-content: center;
+  background-color: var(--cream);
+  width: 100%;
+}
+
+.trending-post-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+
+.post-item-container:hover .post-item-trending-box {
+  background-color: #f3f4f6;
+}
+
+.post-item-container:hover .post-item-trending h5 {
+  color: #3b82f6;
+}
+
+.trending-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+.trending-box::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.trending-box::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.trending-box:hover::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.trending-box::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (max-width: 768px) {
+  .trending-box {
+    position: static;
+    height: auto;
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 500px) {}
+
+@media screen and (min-width: 501px) and (max-width: 767px) {}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {}

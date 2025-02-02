@@ -1,0 +1,44 @@
+services:
+  back:
+    build:
+      context: ./back
+      dockerfile: dockerfile.prod
+    env_file:
+      - .env
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    networks:
+      - production-network
+
+  nginx:
+    build:
+      context: ./front
+      dockerfile: dockerfile.nginx.prod
+    ports:
+      - "80:80"
+    depends_on:
+      - back
+    networks:
+      - production-network
+
+  db:
+    image: postgres:alpine
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./back/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - production-network
+
+volumes:
+  postgres_data:
+
+networks:
+  production-network:

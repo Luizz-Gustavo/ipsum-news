@@ -1,0 +1,39 @@
+.category-header {
+    padding: 2rem 0;
+    border-bottom: 1px solid #eaeaea;
+    margin-bottom: 2rem;
+}
+
+.posts-grid {
+    min-height: 400px;
+}
+
+.post-card {
+    transition: transform 0.2s ease-in-out;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+}
+
+.post-image-container {
+    overflow: hidden;
+}
+
+.post-image-container img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.post-card:hover .post-image-container img {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .category-header {
+        padding: 1rem 0;
+    }
+    
+    .posts-grid {
+        padding: 0 1rem;
+    }
+}

@@ -1,0 +1,22 @@
+.category-link {
+    padding: 3px;
+    position: relative;
+}
+
+.category-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--blue-link);
+    transition: width 0.3s ease-in-out;
+}
+.category-link:hover::after {
+    width: 100%;
+}
+
+.category-link.active::after {
+    width: 100%;
+}

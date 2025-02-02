@@ -1,0 +1,32 @@
+# Stage 1: Builder
+FROM node:20-alpine AS builder
+
+# Install OpenSSL dependencies
+RUN apk add --no-cache openssl openssl-dev
+
+WORKDIR /app
+
+COPY package*.json ./
+
+# Install only the production dependencies
+RUN npm install --only=production
+
+COPY . .
+
+RUN npx prisma generate
+
+# Stage 2: Runtime
+FROM node:20-alpine
+
+# Install OpenSSL dependencies
+RUN apk add --no-cache openssl openssl-dev
+
+WORKDIR /app
+
+COPY --from=builder /app .
+
+ENV NODE_ENV=production
+
+EXPOSE 3000
+
+CMD ["npm", "start"]

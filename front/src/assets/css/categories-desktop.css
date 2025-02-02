@@ -1,0 +1,78 @@
+.category-item-container {
+    margin-bottom: 0.5rem;
+
+}
+
+.category-item-box {
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.category-item-container:hover .category-item-box {
+    background-color: #f3f4f6;
+}
+
+.category-item-container:hover .category-item span {
+    color: var(--blue-link);
+}
+
+.categories-box {
+    border-right: 1px solid var(--gray-1);
+    position: sticky;
+    background-color: var(--cream);
+    overflow-y: auto;
+    width: 100%;
+    height: 100vh;
+}
+
+.categories-title {
+    padding-top: 1rem;
+    padding-left: 1rem;
+    font-size: 1.5rem;
+    color: var(--black);
+    width: 100%;
+}
+
+.category-item-box {
+    transition: all 0.3s ease;
+    padding: 2rem;
+}
+
+.category-item-container {
+    transition: all 0.3s ease;
+}
+
+
+.category-item-box:hover {
+    background-color: var(--gray-1);
+}
+
+.categories-box::-webkit-scrollbar {
+    width: 8px;
+}
+
+.categories-box::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.categories-box::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.categories-box:hover::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.categories-box::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+
+@media (max-width: 768px) {
+    .categories-box {
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
+}

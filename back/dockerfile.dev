@@ -1,0 +1,24 @@
+FROM node:20-alpine
+
+# Install OpenSSL dependencies
+RUN apk add --no-cache openssl openssl-dev
+
+# Create and define the working directory
+WORKDIR /app
+
+# Copy the package.json and package-lock.json (if it exists)
+COPY package*.json ./
+
+# Install the dependencies
+RUN npm install
+
+# Copy the rest of the project files
+COPY . .
+
+RUN npx prisma generate
+
+# Expose the port that the Express server will use
+EXPOSE 3000
+
+# Command to start the server in development mode
+CMD ["npm", "run", "dev"]
