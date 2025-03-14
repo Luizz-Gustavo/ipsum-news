@@ -11,7 +11,7 @@ function NavBarRedirects() {
         <>
             <Link
                 to="/explore"
-                className={`relative block text-white transition duration-200 flex items-center p-4 
+                className={`relative text-white transition duration-200 flex items-center p-4 
                 after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-white after:transition-[width] after:duration-300 after:ease-in-out hover:after:w-full ${location.pathname === '/explorar' ? 'after:w-full' : 'after:w-0'}
                 before:content-[''] before:absolute before:top-0 before:right-0 before:h-[2px] before:bg-white before:transition-[width] before:duration-300 before:ease-in-out hover:before:w-full ${location.pathname === '/explorar' ? '' : 'before:w-0'}`}
             >
@@ -20,7 +20,7 @@ function NavBarRedirects() {
 
             <Link
                 to="/latest-posts" 
-                className={`relative block text-white transition duration-200 flex items-center p-4 
+                className={`relative text-white transition duration-200 flex items-center p-4 
                 after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-white after:transition-[width] after:duration-300 after:ease-in-out hover:after:w-full ${location.pathname === '/ultimas-publicacoes' ? 'after:w-full' : 'after:w-0'}
                 before:content-[''] before:absolute before:top-0 before:right-0 before:h-[2px] before:bg-white before:transition-[width] before:duration-300 before:ease-in-out hover:before:w-full ${location.pathname === '/ultimas-publicacoes' ? '' : 'before:w-0'}`}
             >
@@ -30,7 +30,7 @@ function NavBarRedirects() {
             <AuthorizedComponent allowedRoles={['writer', 'administrator']}>
                 <Link 
                     to="/create-post"
-                    className={`relative block text-white transition duration-200 flex items-center p-4 
+                    className={`relative text-white transition duration-200 flex items-center p-4 
                     after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-white after:transition-[width] after:duration-300 after:ease-in-out hover:after:w-full ${location.pathname === '/criar-publicacao' ? 'after:w-full' : 'after:w-0'}
                     before:content-[''] before:absolute before:top-0 before:right-0 before:h-[2px] before:bg-white before:transition-[width] before:duration-300 before:ease-in-out hover:before:w-full ${location.pathname === '/criar-publicacao' ? '' : 'before:w-0'}`}
                 >

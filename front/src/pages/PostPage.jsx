@@ -66,7 +66,7 @@ function PostPage() {
                 {isUpdated && (
                     <p className="text-xl text-gray-500 flex items-center">
                         <MdOutlinePublishedWithChanges className="mr-2" />
-                        <span className='post-info-update'>Atualizado em {updateDate} - {updateTime}</span>
+                        <span className='post-info-update'>Updated on {updateDate} - {updateTime}</span>
                     </p>
                 )}
                 

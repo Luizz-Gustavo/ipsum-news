@@ -1,4 +1,3 @@
-import React from 'react';
 import useSWR from 'swr';
 import NavBar from "../components/Navbar";
 import { fetchCategories } from '../api/services/fetchCategories';
@@ -51,13 +50,13 @@ function ExplorePage() {
                                     <div key={category.slug} className="mt-5 text-center mb-8 md:mb-12 container mx-auto">
                                         <div className="flex justify-between items-center mb-4 px-4 md:px-0">
                                             <h2 className="text-xl md:text-2xl font-semibold text-black">
-                                                <Link to={`/categorias/${category.slug}`} className="hover:text-blue-600 transition-colors">
+                                                <Link to={`/categories/${category.slug}`} className="hover:text-blue-600 transition-colors">
                                                     {category.name}
                                                 </Link>
                                             </h2>
                                             {hasMorePosts && (
                                                 <a
-                                                    href={`/categorias/${category.slug}`}
+                                                    href={`/categories/${category.slug}`}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
                                                     className="text-blue-600 hover:text-blue-800 text-sm font-medium"
