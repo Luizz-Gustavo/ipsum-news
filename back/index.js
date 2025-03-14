@@ -1,11 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import router from './src/routes.js';
-import {
-  authApiLimiter,
-  createPostLimiter,
-  loginLimiter
-} from './src/middleware/rateLimiter.js';
+import { authApiLimiter, createPostLimiter, loginLimiter } from './src/middleware/rateLimiter.js';
 import cookieParser from 'cookie-parser';
 import dotenv from 'dotenv';
 import { startCleanupService } from './src/controllers/utils/cleanupExpiredCodes.js';

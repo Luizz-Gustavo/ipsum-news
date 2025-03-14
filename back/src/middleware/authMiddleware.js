@@ -7,7 +7,7 @@ dotenv.config();
 const prisma = new PrismaClient();
 
 export const authenticateJWT = async (req, res, next) => {
-    const token = req.cookies.jwt;
+    const token = req.cookies.IPSUM_NEWS_SESSION;
 
     if (!token) {
         return res.status(401).json({ error: 'Access denied. No token provided.' });

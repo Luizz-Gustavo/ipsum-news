@@ -29,15 +29,15 @@ const seed = async () => {
             ]
         });
 
-        const adminPassword = "admin123";
+        const adminPassword = process.env.ADMIN_PASSWORD;
         const hashedPassword = await bcrypt.hash(adminPassword, 10);
 
         const user = await prisma.user.create({
             data: {
-                name: 'ipsum',
-                lastName: 'news',
-                nickname: 'ipsumnews',
-                email: 'ipsumnews@email.com',
+                name: process.env.ADMIN_NAME,
+                lastName: process.env.ADMIN_LAST_NAME,
+                nickname: process.env.ADMIN_NICKNAME,
+                email: process.env.ADMIN_EMAIL,
                 password: hashedPassword,
                 roleId: 1,
             }

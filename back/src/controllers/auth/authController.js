@@ -14,7 +14,7 @@ export const login = async (req, res) => {
     return res.status(400).json({ error: 'Identifier and password are required.' });
   }
 
-  if (req.cookies && req.cookies.jwt) {
+  if (req.cookies && req.cookies.IPSUM_NEWS_SESSION) {
     return res.status(401).json({ error: 'Already logged in.' });
   }
 
@@ -48,7 +48,7 @@ export const login = async (req, res) => {
       { expiresIn: '7d' }
     );
 
-    res.cookie('jwt', token, {
+    res.cookie('IPSUM_NEWS_SESSION', token, {
       httpOnly: true,
       // secure: process.env.NODE_ENV === 'production',
       sameSite: 'strict',
@@ -63,14 +63,14 @@ export const login = async (req, res) => {
 };
 
 export const logout = (req, res) => {
-  if (!req.cookies || !req.cookies.jwt) {
+  if (!req.cookies || !req.cookies.IPSUM_NEWS_SESSION) {
     return res.status(401).json({ error: 'No token provided.' });
   }
 
   try {
-    jwt.verify(req.cookies.jwt, process.env.JWT_SECRET);
+    jwt.verify(req.cookies.IPSUM_NEWS_SESSION, process.env.JWT_SECRET);
 
-    res.clearCookie('jwt', {
+    res.clearCookie('IPSUM_NEWS_SESSION', {
       httpOnly: true,
       // secure: process.env.NODE_ENV === 'production',
       sameSite: 'strict',
@@ -178,11 +178,11 @@ export const register = async (req, res) => {
 
 export const getMe = async (req, res) => {
   try {
-    if (!req.cookies || !req.cookies.jwt) {
+    if (!req.cookies || !req.cookies.IPSUM_NEWS_SESSION) {
       return res.status(401).json({ error: 'Not authenticated' });
     }
 
-    const token = req.cookies.jwt;
+    const token = req.cookies.IPSUM_NEWS_SESSION;
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
     const user = await prisma.user.findUnique({
@@ -193,8 +193,7 @@ export const getMe = async (req, res) => {
     if (!user) {
       return res.status(404).json({ error: 'Invalid Credentials' });
     }
-
-    // Remover informações sensíveis
+    
     const { password, ...userWithoutPassword } = user;
     userWithoutPassword.role = user.role.name;
 
@@ -206,4 +205,4 @@ export const getMe = async (req, res) => {
     console.error('Error fetching user:', error);
     res.status(500).json({ error: 'Internal server error' });
   }
-};
+};  
